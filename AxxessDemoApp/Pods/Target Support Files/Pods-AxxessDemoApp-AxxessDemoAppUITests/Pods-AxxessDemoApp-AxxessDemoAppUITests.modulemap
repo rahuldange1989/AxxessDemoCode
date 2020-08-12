@@ -1,0 +1,6 @@
+framework module Pods_AxxessDemoApp_AxxessDemoAppUITests {
+  umbrella header "Pods-AxxessDemoApp-AxxessDemoAppUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
