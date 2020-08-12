@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,6 +16,8 @@
 		5F269A7A24E400CD00F20B98 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F269A7824E400CD00F20B98 /* LaunchScreen.storyboard */; };
 		5F269A8524E400CD00F20B98 /* AxxessDemoAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F269A8424E400CD00F20B98 /* AxxessDemoAppTests.swift */; };
 		5F269A9024E400CD00F20B98 /* AxxessDemoAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F269A8F24E400CD00F20B98 /* AxxessDemoAppUITests.swift */; };
+		5F269AA124E4060F00F20B98 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F269A9F24E4060F00F20B98 /* Utility.swift */; };
+		5F269AA224E4060F00F20B98 /* NetworkReachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F269AA024E4060F00F20B98 /* NetworkReachability.swift */; };
 		7818F905A475CA405A272E39 /* Pods_AxxessDemoAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25BBCA5DBB97F6FE3FF3840D /* Pods_AxxessDemoAppTests.framework */; };
 		DE6709FBD3FBC5423C71AD60 /* Pods_AxxessDemoApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F5E6CF29263BB2FC28FB5EC /* Pods_AxxessDemoApp.framework */; };
 /* End PBXBuildFile section */
@@ -56,6 +58,8 @@
 		5F269A8B24E400CD00F20B98 /* AxxessDemoAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AxxessDemoAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F269A8F24E400CD00F20B98 /* AxxessDemoAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AxxessDemoAppUITests.swift; sourceTree = "<group>"; };
 		5F269A9124E400CD00F20B98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5F269A9F24E4060F00F20B98 /* Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
+		5F269AA024E4060F00F20B98 /* NetworkReachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkReachability.swift; sourceTree = "<group>"; };
 		9626A47D285BF739F2011881 /* Pods-AxxessDemoApp-AxxessDemoAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AxxessDemoApp-AxxessDemoAppUITests.release.xcconfig"; path = "Target Support Files/Pods-AxxessDemoApp-AxxessDemoAppUITests/Pods-AxxessDemoApp-AxxessDemoAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		C18F67A1CEAE7859301E08E6 /* Pods-AxxessDemoAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AxxessDemoAppTests.release.xcconfig"; path = "Target Support Files/Pods-AxxessDemoAppTests/Pods-AxxessDemoAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		D1443A2AB21E8D227B0DD52A /* Pods-AxxessDemoApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AxxessDemoApp.release.xcconfig"; path = "Target Support Files/Pods-AxxessDemoApp/Pods-AxxessDemoApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -126,6 +130,7 @@
 		5F269A6C24E400C700F20B98 /* AxxessDemoApp */ = {
 			isa = PBXGroup;
 			children = (
+				5F269A9E24E4060F00F20B98 /* Utilities */,
 				5F269A6D24E400C700F20B98 /* AppDelegate.swift */,
 				5F269A6F24E400C700F20B98 /* SceneDelegate.swift */,
 				5F269A7124E400C700F20B98 /* ViewController.swift */,
@@ -155,6 +160,15 @@
 			path = AxxessDemoAppUITests;
 			sourceTree = "<group>";
 		};
+		5F269A9E24E4060F00F20B98 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				5F269A9F24E4060F00F20B98 /* Utility.swift */,
+				5F269AA024E4060F00F20B98 /* NetworkReachability.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 		E9CE1689A57F39B7F4E1582F /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -165,7 +179,6 @@
 				059647A4BA24E1EC516A4800 /* Pods-AxxessDemoAppTests.debug.xcconfig */,
 				C18F67A1CEAE7859301E08E6 /* Pods-AxxessDemoAppTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -408,9 +421,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F269AA124E4060F00F20B98 /* Utility.swift in Sources */,
 				5F269A7224E400C700F20B98 /* ViewController.swift in Sources */,
 				5F269A6E24E400C700F20B98 /* AppDelegate.swift in Sources */,
 				5F269A7024E400C700F20B98 /* SceneDelegate.swift in Sources */,
+				5F269AA224E4060F00F20B98 /* NetworkReachability.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
