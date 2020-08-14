@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0E71914EC0E4447086EEBF55 /* Pods_AxxessDemoApp_AxxessDemoAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE8917E2202377EEDAF23E12 /* Pods_AxxessDemoApp_AxxessDemoAppUITests.framework */; };
+		5F25B96524E6383300E20D9B /* ImageTypeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F25B96424E6383300E20D9B /* ImageTypeTableViewCell.swift */; };
 		5F269A6E24E400C700F20B98 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F269A6D24E400C700F20B98 /* AppDelegate.swift */; };
 		5F269A7224E400C700F20B98 /* PostsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F269A7124E400C700F20B98 /* PostsViewController.swift */; };
 		5F269A7524E400C700F20B98 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F269A7324E400C700F20B98 /* Main.storyboard */; };
@@ -48,6 +49,7 @@
 		25BBCA5DBB97F6FE3FF3840D /* Pods_AxxessDemoAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AxxessDemoAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FBD9A5CBB99F274E7BFCF8B /* Pods-AxxessDemoApp-AxxessDemoAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AxxessDemoApp-AxxessDemoAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-AxxessDemoApp-AxxessDemoAppUITests/Pods-AxxessDemoApp-AxxessDemoAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		4F5E6CF29263BB2FC28FB5EC /* Pods_AxxessDemoApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AxxessDemoApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F25B96424E6383300E20D9B /* ImageTypeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTypeTableViewCell.swift; sourceTree = "<group>"; };
 		5F269A6A24E400C700F20B98 /* AxxessDemoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AxxessDemoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F269A6D24E400C700F20B98 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5F269A7124E400C700F20B98 /* PostsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsViewController.swift; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 		5F25B96324E6356A00E20D9B /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				5F25B96424E6383300E20D9B /* ImageTypeTableViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -474,6 +477,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5F269AA124E4060F00F20B98 /* Utility.swift in Sources */,
+				5F25B96524E6383300E20D9B /* ImageTypeTableViewCell.swift in Sources */,
 				5F269AA524E408B200F20B98 /* Posts.swift in Sources */,
 				5F269A7224E400C700F20B98 /* PostsViewController.swift in Sources */,
 				5F269A6E24E400C700F20B98 /* AppDelegate.swift in Sources */,

@@ -8,6 +8,7 @@
 
 import UIKit
 import SnapKit
+import Kingfisher
 
 class PostsViewController: UIViewController {
 
@@ -44,6 +45,7 @@ class PostsViewController: UIViewController {
 		self.tableView.tableFooterView = UIView()
 		// -- register tableviewcell for text or other types of Post
 		self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "TextOrOtherTypeCell")
+		self.tableView.register(ImageTypeTableViewCell.self, forCellReuseIdentifier: "ImageTypeTableViewCell")
 		// -- set tableView constraints
 		tableView.snp.makeConstraints { make in
 			make.edges.equalTo(self.view).inset(UIEdgeInsets(top: 50, left: 0, bottom: 0, right: 0))
@@ -84,6 +86,14 @@ extension PostsViewController : PostsViewModelDelegate {
 // MARK: - UITableView datasource and delegate methods -
 extension PostsViewController : UITableViewDelegate, UITableViewDataSource {
 
+	func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+		if indexPath.section == 1 {
+			return 300.0
+		}
+		
+		return UITableView.automaticDimension
+	}
+	
 	func numberOfSections(in tableView: UITableView) -> Int {
 		return self.tableViewData.count
 	}
@@ -98,27 +108,39 @@ extension PostsViewController : UITableViewDelegate, UITableViewDataSource {
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		
+		// -- Get current post
+		let currentPost = self.tableViewData[indexPath.section][indexPath.row]
+		
 		// -- TableView Cell for Text and Other type
 		if indexPath.section == 0 || indexPath.section == 2 {
 			
-			var cell = tableView.dequeueReusableCell(withIdentifier: "TextOrOtherTypeCell")
-			
-			if cell?.detailTextLabel == nil {
+			var cell = tableView.dequeueReusableCell(withIdentifier: "TextOrOtherTypeCell", for: indexPath)
+			if cell.detailTextLabel == nil {
 				cell = UITableViewCell(style: .subtitle, reuseIdentifier: "TextOrOtherTypeCell")
 			}
 			
 			// -- to make textLabel multiline
-			cell?.textLabel?.numberOfLines = 0
+			cell.textLabel?.numberOfLines = 0
 			
-			// -- Get current post and set data to cell
-			let currentPost = self.tableViewData[indexPath.section][indexPath.row]
-			cell?.textLabel?.text = currentPost.data ?? ""
-			cell?.detailTextLabel?.text = currentPost.date ?? ""
+			// -- set data to cell
+			cell.textLabel?.text = currentPost.data ?? ""
+			cell.detailTextLabel?.text = currentPost.date ?? ""
 			
-			return cell!
+			return cell
 			
 		} else { // -- TableView Cell for Image type
-			return UITableViewCell()
+			
+			var cell = tableView.dequeueReusableCell(withIdentifier: "ImageTypeTableViewCell", for: indexPath) as? ImageTypeTableViewCell
+			if cell == nil {
+				cell = ImageTypeTableViewCell.init(style: .default, reuseIdentifier: "ImageTypeTableViewCell")
+			}
+			
+			guard let imageUrl = URL(string: currentPost.data ?? "") else { return cell! }
+			cell?.customImageView.kf.indicatorType = .activity
+			cell?.customImageView.kf.setImage(with: imageUrl, placeholder: UIImage(named: "placeholder"))
+			cell?.dateLabel.text = currentPost.date ?? ""
+			
+			return cell!
 		}
 	}
 	

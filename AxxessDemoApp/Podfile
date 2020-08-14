@@ -9,6 +9,7 @@ target 'AxxessDemoApp' do
   pod 'Alamofire'
   pod 'SnapKit'
   pod 'RealmSwift'
+	pod 'Kingfisher'
 
   target 'AxxessDemoAppTests' do
     inherit! :search_paths
