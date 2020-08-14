@@ -7,18 +7,12 @@
 //
 
 import Foundation
-import Network
+import Alamofire
 
 // -- shared instance
 private let _sharedInstance = NetworkReachability.init()
 
 class NetworkReachability {
-    
-    var pathMonitor: NWPathMonitor!
-    var path: NWPath?
-    var pathUpdateHandler: ((NWPath) -> Void) = { path in
-        NetworkReachability.sharedInstance.path = path
-    }
     
     class var sharedInstance: NetworkReachability {
         return _sharedInstance
@@ -26,18 +20,13 @@ class NetworkReachability {
     
     let backgroudQueue = DispatchQueue.global(qos: .background)
     
-    func initialize() {
-        pathMonitor = NWPathMonitor()
-        pathMonitor.pathUpdateHandler = pathUpdateHandler
-        pathMonitor.start(queue: backgroudQueue)
-    }
-    
+	///
+	/// The isNetworkAvailable function checks if internet is available
+	/// and returns its status either true or false
+	///
+	/// - returns: status of Network connection.
+	///
     func isNetworkAvailable() -> Bool {
-        if let path = NetworkReachability.sharedInstance.path {
-            if path.status == NWPath.Status.satisfied {
-                return true
-            }
-        }
-        return false
+		return NetworkReachabilityManager()?.isReachable ?? false
     }
 }

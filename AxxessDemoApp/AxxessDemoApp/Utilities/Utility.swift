@@ -10,6 +10,15 @@ import Foundation
 import UIKit
 
 class Utility {
+	
+	///
+	/// The showAlert function takes 3 parameters and create
+	/// alertController to display message with title
+	///
+	/// - parameter parent: parent viewController on which we need to show alert
+	/// - parameter title: title for Alert
+	/// - parameter message: message for alert
+	///
     static func showAlert(_ parent: UIViewController?, title:String, message:String) {
         if let p = parent {
             let alertView: UIAlertController = UIAlertController(title:title, message: message, preferredStyle: .alert)
@@ -20,7 +29,13 @@ class Utility {
         }
     }
     
-    static func showActivityIndicatory(_ uiView: UIView) {
+    ///
+	/// The showActivityIndicatory function takes 1 parameter and create
+	/// ActivityIndicator to display on View
+	///
+	/// - parameter uiView: view on which we will show ActivityIndicator
+	///
+	static func showActivityIndicatory(_ uiView: UIView) {
         let container: UIView = UIView()
         container.frame = uiView.frame
         container.center = uiView.center
@@ -46,6 +61,12 @@ class Utility {
         actInd.startAnimating()
     }
     
+	///
+	/// The hideActivityIndicatory function takes 1 parameter and hides
+	/// ActivityIndicator on View if available
+	///
+	/// - parameter uiView: view on which we will hide ActivityIndicator
+	///
     static func hideActivityIndicatory(_ uiView: UIView) {
         if let viewWithTag = uiView.viewWithTag(2134) {
             viewWithTag.removeFromSuperview()
@@ -54,18 +75,14 @@ class Utility {
             print("hideActivityIndicatory: tag not found")
         }
     }
-    
-    static func getHourFrom(timeStamp: Double) -> String {
-        let date = Date(timeIntervalSince1970: timeStamp)
-		let formatter = DateFormatter()
-		formatter.dateFormat = "hh a"
-		return formatter.string(from: date)
-    }
+	
 }
 
 // MARK: - UIColor Extension for implementing nethex value acceptance -
 extension UIColor {
-    convenience init(red: Int, green: Int, blue: Int) {
+    
+	// -- initializer which will create UIColor from RGB values
+	convenience init(red: Int, green: Int, blue: Int) {
         assert(red >= 0 && red <= 255, "Invalid red component")
         assert(green >= 0 && green <= 255, "Invalid green component")
         assert(blue >= 0 && blue <= 255, "Invalid blue component")
@@ -73,6 +90,7 @@ extension UIColor {
         self.init(red: CGFloat(red) / 255.0, green: CGFloat(green) / 255.0, blue: CGFloat(blue) / 255.0, alpha: 1.0)
     }
     
+	// -- initializer which will create UIColoer with RGB and transparancy alpha
     convenience init(red: Int, green: Int, blue: Int, alpha:CGFloat, dummy: Int) {
         assert(red >= 0 && red <= 255, "Invalid red component")
         assert(green >= 0 && green <= 255, "Invalid green component")
@@ -81,11 +99,14 @@ extension UIColor {
         self.init(red: CGFloat(red) / 255.0, green: CGFloat(green) / 255.0, blue: CGFloat(blue) / 255.0, alpha: alpha)
     }
     
+	// -- initializer which will create color from Hex value
     convenience init(netHex:Int) {
         self.init(red:(netHex >> 16) & 0xff, green:(netHex >> 8) & 0xff, blue:netHex & 0xff)
     }
     
+	// -- initializer which will create color from Hex value and alpha
     convenience init(netHex:Int, alpha: CGFloat) {
         self.init(red:(netHex >> 16) & 0xff, green:(netHex >> 8) & 0xff, blue:netHex & 0xff, alpha:alpha, dummy: 0)
     }
+	
 }

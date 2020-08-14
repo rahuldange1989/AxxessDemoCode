@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		0E71914EC0E4447086EEBF55 /* Pods_AxxessDemoApp_AxxessDemoAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE8917E2202377EEDAF23E12 /* Pods_AxxessDemoApp_AxxessDemoAppUITests.framework */; };
 		5F269A6E24E400C700F20B98 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F269A6D24E400C700F20B98 /* AppDelegate.swift */; };
-		5F269A7224E400C700F20B98 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F269A7124E400C700F20B98 /* ViewController.swift */; };
+		5F269A7224E400C700F20B98 /* PostsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F269A7124E400C700F20B98 /* PostsViewController.swift */; };
 		5F269A7524E400C700F20B98 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F269A7324E400C700F20B98 /* Main.storyboard */; };
 		5F269A7724E400CD00F20B98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F269A7624E400CD00F20B98 /* Assets.xcassets */; };
 		5F269A7A24E400CD00F20B98 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F269A7824E400CD00F20B98 /* LaunchScreen.storyboard */; };
@@ -19,6 +19,9 @@
 		5F269AA224E4060F00F20B98 /* NetworkReachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F269AA024E4060F00F20B98 /* NetworkReachability.swift */; };
 		5F269AA524E408B200F20B98 /* Posts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F269AA424E408B200F20B98 /* Posts.swift */; };
 		5F4BF72524E415C100DDBEDF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F4BF72424E415C100DDBEDF /* SceneDelegate.swift */; };
+		5FCD81EF24E54695003FA4D2 /* PostsWebServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FCD81EE24E54695003FA4D2 /* PostsWebServices.swift */; };
+		5FCD81F124E54801003FA4D2 /* BaseServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FCD81F024E54801003FA4D2 /* BaseServices.swift */; };
+		5FCD81F324E55B0B003FA4D2 /* PostsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FCD81F224E55B0B003FA4D2 /* PostsViewModel.swift */; };
 		7818F905A475CA405A272E39 /* Pods_AxxessDemoAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25BBCA5DBB97F6FE3FF3840D /* Pods_AxxessDemoAppTests.framework */; };
 		DE6709FBD3FBC5423C71AD60 /* Pods_AxxessDemoApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F5E6CF29263BB2FC28FB5EC /* Pods_AxxessDemoApp.framework */; };
 /* End PBXBuildFile section */
@@ -47,7 +50,7 @@
 		4F5E6CF29263BB2FC28FB5EC /* Pods_AxxessDemoApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AxxessDemoApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F269A6A24E400C700F20B98 /* AxxessDemoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AxxessDemoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F269A6D24E400C700F20B98 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5F269A7124E400C700F20B98 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5F269A7124E400C700F20B98 /* PostsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsViewController.swift; sourceTree = "<group>"; };
 		5F269A7424E400C700F20B98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5F269A7624E400CD00F20B98 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5F269A7924E400CD00F20B98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -62,6 +65,9 @@
 		5F269AA024E4060F00F20B98 /* NetworkReachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkReachability.swift; sourceTree = "<group>"; };
 		5F269AA424E408B200F20B98 /* Posts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Posts.swift; sourceTree = "<group>"; };
 		5F4BF72424E415C100DDBEDF /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		5FCD81EE24E54695003FA4D2 /* PostsWebServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsWebServices.swift; sourceTree = "<group>"; };
+		5FCD81F024E54801003FA4D2 /* BaseServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseServices.swift; sourceTree = "<group>"; };
+		5FCD81F224E55B0B003FA4D2 /* PostsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsViewModel.swift; sourceTree = "<group>"; };
 		9626A47D285BF739F2011881 /* Pods-AxxessDemoApp-AxxessDemoAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AxxessDemoApp-AxxessDemoAppUITests.release.xcconfig"; path = "Target Support Files/Pods-AxxessDemoApp-AxxessDemoAppUITests/Pods-AxxessDemoApp-AxxessDemoAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		C18F67A1CEAE7859301E08E6 /* Pods-AxxessDemoAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AxxessDemoAppTests.release.xcconfig"; path = "Target Support Files/Pods-AxxessDemoAppTests/Pods-AxxessDemoAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		D1443A2AB21E8D227B0DD52A /* Pods-AxxessDemoApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AxxessDemoApp.release.xcconfig"; path = "Target Support Files/Pods-AxxessDemoApp/Pods-AxxessDemoApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -107,6 +113,13 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		5F25B96324E6356A00E20D9B /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		5F269A6124E400C700F20B98 = {
 			isa = PBXGroup;
 			children = (
@@ -132,11 +145,14 @@
 		5F269A6C24E400C700F20B98 /* AxxessDemoApp */ = {
 			isa = PBXGroup;
 			children = (
+				5F25B96324E6356A00E20D9B /* Cells */,
+				5FCD81ED24E54672003FA4D2 /* WebServices */,
+				5F4BF72624E53FA300DDBEDF /* Views */,
+				5F4BF72724E53FBD00DDBEDF /* ViewModels */,
 				5F269AA324E4075900F20B98 /* Models */,
 				5F269A9E24E4060F00F20B98 /* Utilities */,
 				5F269A6D24E400C700F20B98 /* AppDelegate.swift */,
 				5F4BF72424E415C100DDBEDF /* SceneDelegate.swift */,
-				5F269A7124E400C700F20B98 /* ViewController.swift */,
 				5F269A7324E400C700F20B98 /* Main.storyboard */,
 				5F269A7624E400CD00F20B98 /* Assets.xcassets */,
 				5F269A7824E400CD00F20B98 /* LaunchScreen.storyboard */,
@@ -178,6 +194,31 @@
 				5F269AA424E408B200F20B98 /* Posts.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		5F4BF72624E53FA300DDBEDF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5F269A7124E400C700F20B98 /* PostsViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5F4BF72724E53FBD00DDBEDF /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				5FCD81F224E55B0B003FA4D2 /* PostsViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		5FCD81ED24E54672003FA4D2 /* WebServices */ = {
+			isa = PBXGroup;
+			children = (
+				5FCD81EE24E54695003FA4D2 /* PostsWebServices.swift */,
+				5FCD81F024E54801003FA4D2 /* BaseServices.swift */,
+			);
+			path = WebServices;
 			sourceTree = "<group>";
 		};
 		E9CE1689A57F39B7F4E1582F /* Pods */ = {
@@ -434,9 +475,12 @@
 			files = (
 				5F269AA124E4060F00F20B98 /* Utility.swift in Sources */,
 				5F269AA524E408B200F20B98 /* Posts.swift in Sources */,
-				5F269A7224E400C700F20B98 /* ViewController.swift in Sources */,
+				5F269A7224E400C700F20B98 /* PostsViewController.swift in Sources */,
 				5F269A6E24E400C700F20B98 /* AppDelegate.swift in Sources */,
+				5FCD81F124E54801003FA4D2 /* BaseServices.swift in Sources */,
+				5FCD81F324E55B0B003FA4D2 /* PostsViewModel.swift in Sources */,
 				5F269AA224E4060F00F20B98 /* NetworkReachability.swift in Sources */,
+				5FCD81EF24E54695003FA4D2 /* PostsWebServices.swift in Sources */,
 				5F4BF72524E415C100DDBEDF /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
