@@ -110,3 +110,13 @@ extension UIColor {
     }
 	
 }
+
+// -- Extension on uiviewcontroller to get topbar height
+extension UIViewController {
+    /**
+     *  Height of status bar + navigation bar (if navigation bar exist)
+     */
+    var topbarHeight: CGFloat {
+		return self.navigationController?.navigationBar.frame.maxY ?? 0.0
+    }
+}

@@ -29,7 +29,6 @@ class PostsViewController: UIViewController {
 		// Do any additional setup after loading the view.
 		
 		self.title = "Posts"
-		self.navigationController?.navigationBar.prefersLargeTitles = true
 		self.addTableView()
 		
 		self.postsViewModel.delegate = self

@@ -35,13 +35,13 @@ class DisplayViewController: UIViewController {
 	
 	// -- create required initial UI
 	private func createUI() {
-		
+				
 		// -- add imageviw and set constraints
 		self.view.addSubview(imageView)
 		self.imageView.contentMode = .scaleAspectFit
 		self.imageView.backgroundColor = .white
 		self.imageView.snp.makeConstraints { (make) in
-			make.edges.equalTo(self.view).inset(UIEdgeInsets(top: 84, left: 0, bottom: -20, right: 0))
+			make.edges.equalTo(self.view).inset(UIEdgeInsets(top: self.topbarHeight, left: 0, bottom: -20, right: 0))
 		}
 		
 		// -- add textView and set constraints
@@ -50,7 +50,7 @@ class DisplayViewController: UIViewController {
 		dataTextView.isEditable = false
 		dataTextView.isSelectable = false
 		self.dataTextView.snp.makeConstraints { (make) in
-			make.edges.equalTo(self.view).inset(UIEdgeInsets(top: 84, left: 0, bottom: -20, right: 0))
+			make.edges.equalTo(self.view).inset(UIEdgeInsets(top: self.topbarHeight, left: 0, bottom: -20, right: 0))
 		}
 	}
 	
@@ -61,7 +61,7 @@ class DisplayViewController: UIViewController {
 		self.title = postModel.date ?? "Selected Post"
 		
 		// -- hide imageview if posttype is text/other
-		if postModel.type == TypeEnum.text || postModel.type == TypeEnum.other {
+		if postModel.type == TypeEnum.text.rawValue || postModel.type == TypeEnum.other.rawValue {
 			
 			self.imageView.isHidden = true
 			self.dataTextView.isHidden = false

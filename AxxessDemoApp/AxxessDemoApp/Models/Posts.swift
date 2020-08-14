@@ -13,11 +13,11 @@ import RealmSwift
 class PostElement: Object, Codable {
     @objc dynamic var id: String = ""
     @objc dynamic var date: String? = ""
-    @objc dynamic var data: String? = ""
-	var type: TypeEnum = .other
+	@objc dynamic var data: String? = ""
+	@objc dynamic var type: String = ""
 }
 
-enum TypeEnum: String, Codable {
+enum TypeEnum: String {
     case image = "image"
     case other = "other"
     case text = "text"
