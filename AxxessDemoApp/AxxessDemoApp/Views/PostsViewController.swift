@@ -40,6 +40,7 @@ class PostsViewController: UIViewController {
 		
 		// -- add tableview to view
 		self.view.addSubview(self.tableView)
+		self.tableView.accessibilityIdentifier = "PostsTableView"
 		// -- set delegates and data source
 		self.tableView.dataSource = self
 		self.tableView.delegate = self
@@ -117,6 +118,8 @@ extension PostsViewController : UITableViewDelegate, UITableViewDataSource {
 		if indexPath.section == 0 || indexPath.section == 2 {
 			
 			var cell = tableView.dequeueReusableCell(withIdentifier: "TextOrOtherTypeCell", for: indexPath)
+			cell.accessibilityIdentifier = "textCell_\(indexPath.section)_\(indexPath.row)"
+			
 			if cell.detailTextLabel == nil {
 				cell = UITableViewCell(style: .subtitle, reuseIdentifier: "TextOrOtherTypeCell")
 			}
