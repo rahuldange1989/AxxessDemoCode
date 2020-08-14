@@ -11,8 +11,8 @@ import SnapKit
 
 class ImageTypeTableViewCell: UITableViewCell {
 
-	let customImageView: UIImageView = UIImageView()
-	let dateLabel: UILabel = UILabel()
+	let customImageView = UIImageView()
+	let dateLabel = UILabel()
 	
 	required init?(coder aDecoder: NSCoder) {
 		super.init(coder: aDecoder)

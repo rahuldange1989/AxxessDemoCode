@@ -23,6 +23,7 @@
 		5FCD81EF24E54695003FA4D2 /* PostsWebServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FCD81EE24E54695003FA4D2 /* PostsWebServices.swift */; };
 		5FCD81F124E54801003FA4D2 /* BaseServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FCD81F024E54801003FA4D2 /* BaseServices.swift */; };
 		5FCD81F324E55B0B003FA4D2 /* PostsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FCD81F224E55B0B003FA4D2 /* PostsViewModel.swift */; };
+		5FF226D124E650610078D642 /* DisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF226D024E650610078D642 /* DisplayViewController.swift */; };
 		7818F905A475CA405A272E39 /* Pods_AxxessDemoAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25BBCA5DBB97F6FE3FF3840D /* Pods_AxxessDemoAppTests.framework */; };
 		DE6709FBD3FBC5423C71AD60 /* Pods_AxxessDemoApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F5E6CF29263BB2FC28FB5EC /* Pods_AxxessDemoApp.framework */; };
 /* End PBXBuildFile section */
@@ -70,6 +71,7 @@
 		5FCD81EE24E54695003FA4D2 /* PostsWebServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsWebServices.swift; sourceTree = "<group>"; };
 		5FCD81F024E54801003FA4D2 /* BaseServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseServices.swift; sourceTree = "<group>"; };
 		5FCD81F224E55B0B003FA4D2 /* PostsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsViewModel.swift; sourceTree = "<group>"; };
+		5FF226D024E650610078D642 /* DisplayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayViewController.swift; sourceTree = "<group>"; };
 		9626A47D285BF739F2011881 /* Pods-AxxessDemoApp-AxxessDemoAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AxxessDemoApp-AxxessDemoAppUITests.release.xcconfig"; path = "Target Support Files/Pods-AxxessDemoApp-AxxessDemoAppUITests/Pods-AxxessDemoApp-AxxessDemoAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		C18F67A1CEAE7859301E08E6 /* Pods-AxxessDemoAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AxxessDemoAppTests.release.xcconfig"; path = "Target Support Files/Pods-AxxessDemoAppTests/Pods-AxxessDemoAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		D1443A2AB21E8D227B0DD52A /* Pods-AxxessDemoApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AxxessDemoApp.release.xcconfig"; path = "Target Support Files/Pods-AxxessDemoApp/Pods-AxxessDemoApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -203,6 +205,7 @@
 			isa = PBXGroup;
 			children = (
 				5F269A7124E400C700F20B98 /* PostsViewController.swift */,
+				5FF226D024E650610078D642 /* DisplayViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -479,6 +482,7 @@
 				5F269AA124E4060F00F20B98 /* Utility.swift in Sources */,
 				5F25B96524E6383300E20D9B /* ImageTypeTableViewCell.swift in Sources */,
 				5F269AA524E408B200F20B98 /* Posts.swift in Sources */,
+				5FF226D124E650610078D642 /* DisplayViewController.swift in Sources */,
 				5F269A7224E400C700F20B98 /* PostsViewController.swift in Sources */,
 				5F269A6E24E400C700F20B98 /* AppDelegate.swift in Sources */,
 				5FCD81F124E54801003FA4D2 /* BaseServices.swift in Sources */,

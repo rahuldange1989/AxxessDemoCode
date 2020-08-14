@@ -21,6 +21,9 @@ class PostsViewController: UIViewController {
 	// -- Tableview to display all posts
 	let tableView = UITableView()
 	
+	// -- create DiplayViewController instance
+	let displayVC = DisplayViewController()
+	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		// Do any additional setup after loading the view.
@@ -48,7 +51,7 @@ class PostsViewController: UIViewController {
 		self.tableView.register(ImageTypeTableViewCell.self, forCellReuseIdentifier: "ImageTypeTableViewCell")
 		// -- set tableView constraints
 		tableView.snp.makeConstraints { make in
-			make.edges.equalTo(self.view).inset(UIEdgeInsets(top: 50, left: 0, bottom: 0, right: 0))
+			make.edges.equalTo(self.view).inset(UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0))
 		}
 		
 	}
@@ -119,6 +122,9 @@ extension PostsViewController : UITableViewDelegate, UITableViewDataSource {
 				cell = UITableViewCell(style: .subtitle, reuseIdentifier: "TextOrOtherTypeCell")
 			}
 			
+			// -- set cell selection stype to none
+			cell.selectionStyle = .none
+			
 			// -- to make textLabel multiline
 			cell.textLabel?.numberOfLines = 0
 			
@@ -135,6 +141,10 @@ extension PostsViewController : UITableViewDelegate, UITableViewDataSource {
 				cell = ImageTypeTableViewCell.init(style: .default, reuseIdentifier: "ImageTypeTableViewCell")
 			}
 			
+			// -- set cell selection stype to none
+			cell?.selectionStyle = .none
+			
+			// -- create imageUrl from string and assing it to imageview using Kingfisher
 			guard let imageUrl = URL(string: currentPost.data ?? "") else { return cell! }
 			cell?.customImageView.kf.indicatorType = .activity
 			cell?.customImageView.kf.setImage(with: imageUrl, placeholder: UIImage(named: "placeholder"))
@@ -144,4 +154,9 @@ extension PostsViewController : UITableViewDelegate, UITableViewDataSource {
 		}
 	}
 	
+	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+		let selectedPost = self.tableViewData[indexPath.section][indexPath.row]
+		self.displayVC.setPostModel(model: selectedPost)
+		self.navigationController?.pushViewController(self.displayVC, animated: true)
+	}
 }
